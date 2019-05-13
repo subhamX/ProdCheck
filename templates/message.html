@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block cssfiles %}
+    <link rel='stylesheet' type='text/css' href='{% static "base/formstyle.css" %}'>
+{% endblock %}
+{% block content %}
+    <h2 class='p-6 text-white'>
+        {{message|linebreaks}}
+    </h2>
+    <a class='btn btn-primary p-6' href='\'>HOME</a>
+    <!-- <h2 class='text-white p-6'>
+        {{message}}
+    </h2>
+    <h2 class='text-white p-6'>
+        {{message}}
+    </h2> -->
+{% endblock %}
+

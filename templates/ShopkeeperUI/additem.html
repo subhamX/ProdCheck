@@ -1,0 +1,35 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block cssfiles %}
+    <link rel='stylesheet' type='text/css' href='{% static "base/formstyle.css" %}'>
+{% endblock %}
+{% block content %}
+<header class='header text-white' style="margin-bottom: 3vw;">
+        <h1>Add New Item</h1>
+</header>
+    <form action='/shophome/additem/' method='POST'>
+        {% csrf_token %}
+        <div class="form-group text-white">
+                {{form.name.label_tag}}
+                {{form.name}}
+            </div>
+            <div class="form-group text-white">
+                {{form.desc.label_tag}}
+                {{form.desc}}
+            </div>
+            <div class="form-group text-white">
+                {{form.avail.label_tag}}
+                {{form.avail}}
+            </div>
+            <div class="form-group text-white">
+                {{form.shopProfile.label_tag}}
+                {{form.shopProfile}}
+            </div>
+            <div class="form-group text-white">
+                {{form.errors}}  
+            </div>
+        <button type="submit" class="btn btn-primary">Add New Item</button>
+    </form>
+{% endblock %}
+

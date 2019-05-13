@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block cssfiles %}
+    <link rel='stylesheet' type='text/css' href='{% static "base/formstyle.css" %}'>
+{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+    <a href='{% url "Logout" %}'>Logout</a>
+{% endif %}
+{{message}}
+<header class='header text-white' style="margin-bottom: 3vw;">
+        <h1>SignUp For ProdCheck</h1>
+</header>
+    <form action='/accounts/signup/' method='POST'>
+        {% csrf_token %}
+        <div class="form-group text-white">
+                {{form.first_name.label_tag}}
+                {{form.first_name}}
+            </div>
+            <div class="form-group text-white">
+                {{form.last_name.label_tag}}
+                {{form.last_name}}
+                <!-- {{form.last_name.errors}} -->
+            </div>
+            <div class="form-group text-white">
+                {{form.email.label_tag}}
+                {{form.email}}
+                <!-- {{form.email.errors}} -->
+            </div>
+            
+            <div class="form-group text-white">
+                {{form.username.label_tag}}
+                {{form.username}}
+                <!-- {{form.username.errors}} -->
+            </div>
+            <div class="form-group text-white">
+                <label for='{{form.password1.id_for_label}}'>Password:</label>
+                {{form.password1}}
+                <!-- {{form.password1.errors}} -->
+            </div>
+            <div class="form-group text-white">
+                <label for='{{form.password2.id_for_label}}'>Re-Password:</label>
+                {{form.password2}}
+                <!-- {{form.password2.errors}} -->
+            </div>
+            <div class="form-group text-white">
+                {{form.shopOwner.label_tag}}
+                {{form.shopOwner}}
+                <!-- {{form.email.errors}} -->
+            </div>
+            <div class="form-group text-white">
+                <!-- {{form.errors}}   -->
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

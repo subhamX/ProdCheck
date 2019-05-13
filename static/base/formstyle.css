@@ -1,0 +1,21 @@
+form{
+    margin:auto;
+    border: 3px solid white;
+    padding: 5vw;
+    border-radius: 5vw; 
+    width:fit-content;
+}
+
+input{
+    width:50vw !important;
+    color: black !important;
+}
+
+input, select, textarea{
+    color: black !important;
+}
+
+.form-check-input{
+    width:5vw;
+    width: fit-content
+}

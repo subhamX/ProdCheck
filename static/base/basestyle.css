@@ -1,0 +1,27 @@
+.navbar-nav li{
+    margin-left:2vw;
+    /* margin-right:2vw; */
+}
+
+body{
+    background-color: rgb(0, 0, 0) !important;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: blur()
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white
+}
+
+
+.content{
+    border: 5px solid white !important;
+}
+
+.table{
+    width: auto !important;
+}

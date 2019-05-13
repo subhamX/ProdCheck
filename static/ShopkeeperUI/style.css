@@ -1,0 +1,11 @@
+body{
+    /* background-image: url('./homeBanner.png'); */
+    background-color: #FFA07A;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-blend-mode: lighten; */
+}
+
+.header{
+    text-align:center;
+}

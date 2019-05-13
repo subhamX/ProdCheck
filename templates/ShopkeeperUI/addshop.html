@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block cssfiles %}
+    <link rel='stylesheet' type='text/css' href='{% static "base/formstyle.css" %}'>
+{% endblock %}
+{% block content %}
+{{message}}
+    <header class='header text-white' style="margin-bottom: 3vw;">
+            <h1>Add New Shop</h1>
+    </header>
+    <form action='/shophome/addshop/' method='POST'>
+        {% csrf_token %}
+        <div class="form-group text-white">
+                {{form.name.label_tag}}
+                {{form.name}}
+            </div>
+            <div class="form-group text-white">
+                {{form.desc.label_tag}}
+                {{form.desc}}
+            </div>
+            <div class="form-group text-white">
+                {{form.address.label_tag}}
+                {{form.address}}
+            </div>
+            <div class="form-group text-white">
+                {{form.errors}}  
+            </div>
+        <button type="submit" class="btn btn-primary">Add Shop</button>
+    </form>
+{% endblock %}
+
