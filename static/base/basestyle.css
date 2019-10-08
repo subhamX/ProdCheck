@@ -4,8 +4,7 @@
 }
 
 body{
-    background-color: rgb(0, 0, 0) !important;
-    background-image: url(background.png);
+    background-color:#87CEEB !important;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -13,7 +12,7 @@ body{
 }
 
 nav{
-    background-color: rgb(0, 0, 0);
+    background-color:#4682B4;
     color: white
 }
 
