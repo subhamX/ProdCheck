@@ -4,8 +4,7 @@
 }
 
 body{
-    background-color: rgb(0, 0, 0) !important;
-    background-image: url(background.png);
+    background-color: rgb(135, 206, 235) !important;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -13,13 +12,13 @@ body{
 }
 
 nav{
-    background-color: rgb(0, 0, 0);
-    color: white
+    background-color: rgb(135, 206, 235);
+    color: #0f0f0f
 }
 
 
 .content{
-    border: 5px solid white !important;
+    border: 5px solid black !important;
 }
 
 .table{
