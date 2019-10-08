@@ -2,26 +2,24 @@
 
 A web app to help people know what products are available in the store before going there. This app can be hosted and implemented independently.
 
-## Getting Started
-
-### Prerequisites
-
-Clone this repo using - 
-
+## For Developers
+[![Gitter](https://badges.gitter.im/convocation/ProdCheck.svg)](https://gitter.im/convocation/ProdCheck?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+1. First of all fork this repo.
+2. Clone the repo - 
 ```
-git clone https://github.com/subhamX/ProdCheck.git
+git clone https://github.com/YOUR_USERNAME/ProdCheck.git
 ```
-### Installing
-
-This app is made with Django which needs python3. Once you have python, Install Django -
-```
-pip install django
-```
-Then, install all the dependencies using - 
-
+3. Installing
+This app is made with Django which needs python3. Once you have python
+Install all the dependencies using - 
 ```
 pip install -r requirements.txt
 ```
+4. Make the necessary changes. And then commit it.
+5. Push it to the server and submit a PR.
+6. In case of any help you can always join Gitter.
+
+In case you love contributing don't forget to give a star.
 
 ### Starting the server
 
